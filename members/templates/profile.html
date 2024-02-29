@@ -1,0 +1,118 @@
+{% extends "dashboard.html" %}
+{% load static %}
+{% block start %}
+<div class="loading text-center">
+    <p>Loading...</p>
+</div>
+
+<div class="container-fluid px-5" role="main">
+    <div class="row">
+        <div class="col-4 mt-5 ml-4">
+            <img class="profile" src="{% static 'members/images/profile.png' %}" alt="Profile Image"> 
+        </div>
+        
+        <div class="col-5 mt-5 p-3">
+            
+            <h1><span id="name">{{request.user.full_name}}</span></h1>
+            <p><strong>Email:</strong> <span id="email">{{ request.user.email }}</span></p>
+            <p><strong>Phone Number:</strong> <span id="phone">{{ request.user.phone }}</span></p>
+            <!-- <a href="/Editprofile"><button class="btn btn-outline-secondary">Edit Profile</button></a> -->
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h2>Mental Health and Well-being</h2>
+            <p>Mental health is an essential part of our overall well-being. It includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. Good mental health helps us cope with the stresses of life, work productively, and contribute to our communities. It also enhances our relationships, making us more resilient and able to deal with challenges.</p>
+    
+            <h2>Why Mental Health Matters</h2>
+            <p>When we talk about mental health, we are talking about more than just mental illness. Mental health is about having a sense of well-being, being able to function effectively in daily life, and feeling emotionally stable. It is about finding balance in our thoughts, emotions, and behaviors.</p>
+    
+            <h2>Mental Health Awareness</h2>
+            <p>It is important to raise awareness about mental health and well-being. Many people still feel ashamed or embarrassed to talk about their mental health issues. By raising awareness, we can reduce the stigma surrounding mental illness and create a more supportive environment for those who are struggling.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Related Videos</h2>
+            
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/lQhpetkwWnM?si=h3cCcv79mwXWgWzF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/DxIDKZHW3-E?si=eVDlQzirrCgE1xMG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="well-being-section">
+        <h2>Take Care of Your Mental Health</h2>
+        <p>Here are some tips to help maintain your mental health and well-being:</p>
+        <ul>
+            <li>Exercise regularly</li>
+            <li>Eat a healthy diet</li>
+            <li>Get enough sleep</li>
+            <li>Connect with others</li>
+            <li>Seek professional help if needed</li>
+        </ul>
+    </div>
+
+    <!-- <div class="row mt-5 ml-4">
+        <div class="col-5">
+            <h1>Past Analysis</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Analysis Type</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-01-20</td>
+                        <td>Mental health</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-20</td>
+                        <td>Mental health</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-20</td>
+                        <td>Mental health</td>
+                        <td>Positive</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-5">
+            <h1>Appointments</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date and time</th>
+                        <th>Doctor Name</th>
+                        <th>Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-01-20  2:30 pm</td>
+                        <td>Harry </td>
+                        <td>98563214578</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-20  4:30 pm</td>
+                        <td>Kishor </td>
+                        <td>98563214578</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-20  2:30 pm</td>
+                        <td>padma</td>
+                        <td>98563214578</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+</div>
+
+
+
+{% endblock %}

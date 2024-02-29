@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'members/css/firstpage.css' %}">
+    <link rel="stylesheet" href="{% static 'members/css/style.css' %}">
+
+    <!-- favicon -->
+    <link rel="icon" sizes="16x16" href="{% static 'members/images/favicon-16x16.png' %}">
+    <link rel="icon" sizes="32x32" href="{% static 'members/images/favicon-32x32.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'members/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'members/images//android-chrome-192x192.png'%}">
+    <link rel="icon" type="image/png" sizes="256x256" href="{% static 'members/images//android-chrome-256x256.png' %}">
+    <link rel="stylesheet" href="{% static 'members/css/quicktest.css' %}">
+    <!-- <link rel="stylesheet" href="signup.css"> -->
+
+</head>
+<body>
+
+
+  <!-- Page 1 -->
+<div class="px-4" id="Home" style="background-color: #f4f4f4;">
+  <div class="container-fluid">
+    <nav class="navbar pt-4">
+          <div class="row">
+                <div class="col-md-3 mt-1">
+                  <a class="navbar-brand" href="/landing/">
+                    <img src="{% static 'members/images/logo.png' %}" alt="My Site Logo">
+                  </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Questions  -->
+<div class="quick_test">
+
+    <form method="post" class="test_form">
+        {% csrf_token %}
+        <h1 style="text-align: center;color: #333;">Mental Health Quick Test</h1>
+        <label class = "test_label">How often have you felt overwhelmingly sad in the past two weeks?</label>
+        <select name="feeling_sad">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        <label class = "test_label">Have you lost interest or pleasure in your usual activities?</label>
+        <select name="lost_interest">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        <label class = "test_label">How often have you had trouble falling asleep, staying asleep, or sleeping too much?</label>
+        <select name="sleep_issues">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        <label class = "test_label">Do you experience changes in appetite or weight (loss or gain)?</label>
+        <select name="appetite_changes">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        <label class = "test_label">How often do you feel bad about yourself or that you are a failure?</label>
+        <select name="self_worth">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        <label class = "test_label">Are you having trouble concentrating on things, such as reading or watching television?</label>
+        <select name="concentration_issues">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        <label class = "test_label">Have you noticed changes in your physical activity level, such as moving or speaking more slowly or more quickly than usual?</label>
+        <select name="activity_level_changes">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        <label class = "test_label">Have you had thoughts that you would be better off dead, or of hurting yourself in some way?</label>
+        <select name="suicidal_thoughts">
+            <option value="0"> </option>
+            <option value="1">Not at all</option>
+            <option value="2">Several Days</option>
+            <option value="3">More than half a week</option>
+            <option value="4">Nearly every day</option>
+        </select><br><br>
+
+        
+        <button id="displayResultBtn" class="result ml-5 btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        See result
+    </button>
+    
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title text-success" id="exampleModalLabel">Result</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                ...
+            </div>
+                <div class="modal-footer">
+
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button> -->
+                <a href="/signup/"><button type="button" class="btn btn-success">Get Detailed Analysis, Register</button></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+<script>
+  document.getElementById('displayResultBtn').addEventListener('click', function() {
+      // Calculate the result
+      const feelingSad = parseInt(document.querySelector('select[name="feeling_sad"]').value);
+      const lostInterest = parseInt(document.querySelector('select[name="lost_interest"]').value);
+      const sleepIssues = parseInt(document.querySelector('select[name="sleep_issues"]').value);
+      const appetiteChanges = parseInt(document.querySelector('select[name="appetite_changes"]').value);
+      const selfWorth = parseInt(document.querySelector('select[name="self_worth"]').value);
+      const concentrationIssues = parseInt(document.querySelector('select[name="concentration_issues"]').value);
+      const activityLevelChanges = parseInt(document.querySelector('select[name="activity_level_changes"]').value);
+      const suicidalThoughts = parseInt(document.querySelector('select[name="suicidal_thoughts"]').value);
+
+      const totalScore = feelingSad + lostInterest + sleepIssues + appetiteChanges + selfWorth +
+          concentrationIssues + activityLevelChanges + suicidalThoughts;
+
+      let resultText;
+      if (totalScore/4 == 0) {
+        resultText = 'All fields must be filled for accurate assessent'
+      } else if (totalScore/4 <= 2) {
+          resultText = 'You are not experiencing any symptoms of depression. ';
+      } else if (totalScore/4 <= 5) {
+          resultText = 'You are experiencing mild symptoms of depression. It is recommended to seek support and talk to someone about your feelings.';
+      } else if (totalScore/4 <= 7) {
+          resultText = 'You are experiencing moderate symptoms of depression. It is highly recommended to seek professional help and talk to a doctor or therapist.';
+      } else {
+          resultText = 'You are experiencing severe symptoms of depression. It is crucial to seek immediate professional help and support.';
+      }
+
+      // Display the result in the modal
+      document.getElementById('modalBody').innerText = resultText;
+  });
+</script>
+
+<!-- Button trigger modal -->
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends "dashboard.html" %}
+{% load static %}
+{% block start %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-danger alert-dismissible fade show ermsg_top" role="alert">
+        <div class="ermsg">
+        <strong>Email Sent</strong> {{message}}
+    </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+{% endif %}
+<style>
+  .form-group label {
+    margin-bottom: .5rem;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+  }
+
+</style>
+
+
+<form action="{% url 'send_email_url' %}" method="post" class="p-4 bg-light">
+  {% csrf_token %}
+  <h2 class="text-success">Doctor Appointment Form</h2>
+  <input type="hidden" name="doctorid" value="{{id}}">
+  <div class="form-group">
+    <label for="email" class="font-weight-bold">Subject:</label>
+    <input type="text" id="emailsubject" name="emailsubject" required placeholder="To Book an Appointment" class="form-control">
+  </div>
+  <div class="form-group mt-3">
+    <label for="message" class="font-weight-bold">Message:</label>
+    <textarea id="message" name="message" rows="3" class="form-control"></textarea>
+  </div>
+  <br>
+  
+  <button type="submit" class="btn btn-success">Send Email</button>
+</form>
+
+{% endblock%}

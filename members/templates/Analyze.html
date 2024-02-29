@@ -1,0 +1,82 @@
+{% extends "dashboard.html" %}
+{% load static %}
+{% block start %}
+
+<style>
+  .result-text {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 540px;
+  }
+
+  .mb-4 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .result-txt {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 540px;
+  }
+</style>
+
+<div class="container theme-showcase" role="main">
+  <div class="jumbotron">
+    <div class="text-center">
+      <h3 class="mb-4">Enter some text below for sentiment analysis:</h3>
+      <textarea id="txt" class="form-control mb-4"></textarea>
+      <button id="resultbutton" type="button" class="btn btn-success btn-md" onclick="analyzeSentiment()">Result</button>
+    </div>
+    <div class="row">
+      <div class="col-6 mt-4">
+        <pre id="result" class="result-text"></pre>
+      </div>
+
+      <div class="col-6 mt-4">
+        <div id="result-text" class="result-txt"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function analyzeSentiment() {
+    var text = document.getElementById('txt').value;
+
+    // Perform sentiment analysis
+    var analysisResult = analyze(text);
+
+    // Update the result based on the analysis
+    var resultElement = document.getElementById('result');
+    var resultTextElement = document.getElementById('result-text');
+
+    if (analysisResult.sentiment === 'positive') {
+      resultElement.innerText = 'Positive';
+      resultTextElement.innerText = 'Please Consult with doctor!';
+    } else if (analysisResult.sentiment === 'negative') {
+      resultElement.innerText = 'Negative';
+      resultTextElement.innerText = 'Your mental status is good!';
+    } else {
+      resultElement.innerText = 'Neutral';
+      resultTextElement.innerText = 'You are neutral!';
+    }
+  }
+
+  // Function to simulate sentiment analysis (replace with actual implementation)
+  function analyze(text) {
+    // Simulate sentiment analysis
+    var sentiment = Math.random() > 0.5 ? 'positive' : 'negative';
+    return {
+      sentiment: sentiment
+    };
+  }
+</script>
+
+{% endblock start %}

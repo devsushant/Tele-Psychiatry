@@ -1,0 +1,623 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'members/css/firstpage.css' %}">
+    <link rel="stylesheet" href="{% static 'members/css/style.css' %}">
+
+    <!-- favicon -->
+    <link rel="icon" sizes="16x16" href="{% static 'members/images/favicon-16x16.png' %}">
+    <link rel="icon" sizes="32x32" href="{% static 'members/images/favicon-32x32.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'members/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'members/images//android-chrome-192x192.png'%}">
+    <link rel="icon" type="image/png" sizes="256x256" href="{% static 'members/images//android-chrome-256x256.png' %}">
+
+    <!-- <link rel="stylesheet" href="signup.css"> -->
+
+</head>
+<body>
+
+
+  <!-- Page 1 -->
+<div class="firstpage px-4" id="Home">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand navbar-light pt-4">
+          <div class="col-md-12">
+          <div class="row">
+                <div class="col-md-3 mt-1">
+                  <a class="navbar-brand" href="/landing/">
+                    <img src="{% static 'members/images/logo.png' %}" alt="My Site Logo">
+                  </a>
+                </div>
+              <div class="col-md-7 mt-2">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-underline ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Doctor">Find Doctor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FAQ">FAQ</a>
+                    </li>
+                </ul>                       
+              </div>
+              </div>
+            <div class="col-md-2 mt-2">
+                <div class="nav-item">
+                    <a href="/signin"><button class="register-button">Sign In</button></a>
+                </div>
+            </div>   
+          </div>
+        </div>        
+        
+  </nav>
+    <div class="container">
+      <div class="row">
+              <div class="col-6 mt-3 text">
+                  <h1>A professional and friendly care Provider</h1>
+                  <p>We will help you in maintaining your health here we choose you a doctor who is experienced and certified in his field. </p>
+                  <div class="button-container mt-5">
+                      <!-- <button class="appointment-button">Appointment</button> -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="border: none; background-image: linear-gradient(180deg, #0E9DD2, #58BB99);">
+                         Make Appointment
+                      </button>
+                      <a href="/quicktest1/"><button type="button" class="btn btn-success ml-2" data-toggle="modal" data-target="#exampleModal" style="border: none; background-image: linear-gradient(180deg, #0E9DD2, #58BB99); margin-left: 10px;">
+                        Quick Test
+                      </button> </a>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel"> Login Required 🔔</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Please Sign in to make an appointment!
+                            </div>
+                            <div class="modal-footer">
+                              <!-- <a href="/signin"><button type="button" class="btn btn-secondary" data-dismiss="modal">Sign-In</button></a> -->
+                              <a href="/signin/" rel="noopener noreferrer"><button type="button" class="btn btn-success" style="border: none; background-image: linear-gradient(180deg, #0E9DD2, #58BB99);">Sign-In</button></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- <div class="play-button m-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                              <path d="M0 18.1682V2.96974C0 1.32726 1.87027 0.38499 3.19023 1.36246L13.7631 9.19199C14.8621 10.0059 14.8384 11.6581 13.7164 12.4401L3.14359 19.809C1.81767 20.7331 0 19.7844 0 18.1682Z" fill="url(#paint0_linear_2_300)"/>
+                              <defs>
+                                  <linearGradient id="paint0_linear_2_300" x1="-7" y1="11.5" x2="14.5" y2="8.5" gradientUnits="userSpaceOnUse">
+                                      <stop stop-color="#1EABE2"/>
+                                      <stop offset="1" stop-color="#6EC386"/>
+                                  </linearGradient>
+                              </defs>
+                          </svg>
+                          Watch Video
+                      </div> -->
+                  </div>                                    
+              </div>
+              <div class="col-6">
+                  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="{% static 'members/images/image.png' %}" class="d-block w-95" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <!-- <h5>First slide label</h5> -->
+                                  <!-- <p>Some representative placeholder content for the first slide.</p> -->
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="{% static 'members/images/doctor2.png' %}" class="d-block w-95" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <!-- <h5>Second slide label</h5> -->
+                                  <!-- <p>Some representative placeholder content for the second slide.</p> -->
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <img src="{% static 'members/images/newdoc.png' %}" class="d-block w-95" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <!-- <h5>Third slide label</h5> -->
+                                  <!-- <p>Some representative placeholder content for the third slide.</p> -->
+                              </div>
+                          </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+                  
+                  
+              </div>
+      </div></div>
+    </div>
+</div>
+
+<!-- page 2 -->
+<div class="container pb-5" id="About">
+    <div class="col-lg-12">
+      <div class="row text-center">
+        <div class="col-md-6 align-self-center">
+          <div class="image">
+            <img src="{% static 'members/images/doctor2.png' %}" alt="" srcset="">
+          </div>
+        </div>
+
+        <!-- Why Us Text -->
+        <div class="col-lg-6 text-lg-start text-center">
+          <div class="text-box pt-5">
+            <div class="row row-cols-1">
+              <div class="col">
+                <h1 class="page2-head">Why People Choose Us ?</h1>
+              </div>
+              <div class="col">
+                <p class="page2-subhead">We strive to convert distant medical possibilities to current procedures, aiding our patients We are committed to fulfilling health aspirations of citizens across the globe.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Icons  -->
+          <!-- row cols 2 => each row has 2 columns  -->
+          <div class="row row-cols-lg-2 row-cols-1 row gy-4"> 
+
+            <!-- Icon 1 -->
+            <div class="col page2-aboutus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="page2-icon">
+                <rect width="50" height="50" rx="5" fill="#4793FE"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4175 12.0854C20.9642 12.1944 20.278 12.56 19.9022 12.8926C18.8686 13.8076 18.4466 15.3576 18.8732 16.672C19.1217 17.4381 19.1813 17.5062 22.4314 20.7423L25.4999 23.7976L28.4937 20.8264C30.3858 18.9485 31.569 17.7314 31.709 17.5188C32.6749 16.052 32.4129 14.0606 31.1 12.891C30.7357 12.5664 29.9178 12.1498 29.4636 12.0575C29.0398 11.9714 28.2453 11.9837 27.8217 12.0828C27.2673 12.2126 26.6464 12.5635 26.1332 13.0371C25.5274 13.596 25.4743 13.5957 24.861 13.0298C24.3598 12.5674 23.758 12.2317 23.1608 12.0814C22.7434 11.9764 21.8624 11.9784 21.4175 12.0854ZM26.7172 14.2647C26.8506 14.3973 26.8557 14.4302 26.8557 15.1617V15.9211H27.6203C28.3569 15.9211 28.39 15.9261 28.5234 16.0587C28.6609 16.1951 28.662 16.2049 28.662 17.2665C28.662 18.3281 28.6609 18.3379 28.5234 18.4744C28.39 18.6069 28.3569 18.612 27.6203 18.612H26.8557V19.3713C26.8557 20.1029 26.8506 20.1358 26.7172 20.2683C26.5798 20.4048 26.5699 20.4059 25.501 20.4059C24.4322 20.4059 24.4223 20.4048 24.2849 20.2683C24.1514 20.1358 24.1463 20.1029 24.1463 19.3713V18.612H23.3817C22.6452 18.612 22.612 18.6069 22.4786 18.4744C22.3412 18.3379 22.34 18.3281 22.34 17.2665C22.34 16.2049 22.3412 16.1951 22.4786 16.0587C22.612 15.9261 22.6452 15.9211 23.3817 15.9211H24.1463V15.1617C24.1463 14.4302 24.1514 14.3973 24.2849 14.2647C24.4223 14.1282 24.4322 14.1271 25.501 14.1271C26.5699 14.1271 26.5798 14.1282 26.7172 14.2647ZM25.0494 15.9211V16.818H24.1463H23.2432V17.2665V17.715H24.1463H25.0494V18.612V19.509H25.501H25.9526V18.612V17.715H26.8557H27.7589V17.2665V16.818H26.8557H25.9526V15.9211V15.0241H25.501H25.0494V15.9211ZM14.3241 17.3366C14.0867 17.4971 13.9401 17.696 13.8966 17.9169C13.863 18.0875 13.8671 18.0914 14.1219 18.126C14.6229 18.1943 15.2207 18.6158 15.4552 19.0663C15.513 19.1774 15.8559 20.1738 16.2171 21.2805C16.5782 22.3872 16.879 23.2979 16.8854 23.3042C16.8918 23.3106 17.0313 23.2768 17.1954 23.229C17.4335 23.1597 17.4861 23.1235 17.4565 23.0494C17.4361 22.9984 17.0111 21.7836 16.512 20.3499C16.0129 18.9161 15.5557 17.6731 15.4961 17.5876C15.2465 17.2299 14.6659 17.1055 14.3241 17.3366ZM35.8056 17.3375C35.6831 17.4064 35.5381 17.539 35.4833 17.6323C35.4285 17.7254 34.9783 18.9616 34.483 20.3792C33.9876 21.7969 33.5657 22.9984 33.5454 23.0494C33.5159 23.1234 33.5687 23.1597 33.8067 23.229C33.9707 23.2768 34.1099 23.3107 34.116 23.3045C34.1221 23.2982 34.4243 22.3849 34.7876 21.2749C35.1509 20.1649 35.4962 19.1627 35.5551 19.048C35.7869 18.5957 36.3604 18.1968 36.8806 18.126C37.1349 18.0914 37.139 18.0875 37.1055 17.9169C36.9915 17.3388 36.3285 17.0433 35.8056 17.3375ZM13.421 19.1305C13.3183 19.1999 13.1857 19.3219 13.1263 19.4017C12.8894 19.7194 12.8998 19.7738 13.9262 23.5758C15.044 27.7164 15.0215 27.6416 15.2188 27.8746C15.3014 27.9721 16.0674 28.6669 16.9212 29.4187C17.7749 30.1704 18.5686 30.9035 18.685 31.0477C19.038 31.4852 19.1368 31.8178 19.1663 32.6693L19.1921 33.4121H21.4434H23.6947L23.6939 31.1276C23.693 28.5671 23.6761 28.4168 23.313 27.7277C22.9146 26.9715 22.6324 26.7559 20.1931 25.3438C17.8268 23.974 17.7253 23.9317 17.2949 24.1346C16.7426 24.3948 16.6368 25.1863 17.0993 25.597C17.1721 25.6617 17.8032 26.0395 18.5017 26.4366C19.2002 26.8338 19.8289 27.2149 19.8987 27.2836C20.0705 27.4525 20.0655 27.7156 19.8872 27.8926C19.811 27.9683 19.6891 28.0302 19.6164 28.0302C19.4694 28.0302 16.781 26.509 16.4688 26.2491C16.1322 25.9689 15.9438 25.553 15.9161 25.029C15.896 24.6494 15.9127 24.5298 16.0203 24.2814L16.1484 23.9857L15.4257 21.7614C15.0282 20.538 14.6539 19.467 14.5937 19.3815C14.3421 19.0235 13.7627 18.8995 13.421 19.1305ZM36.7058 19.1332C36.5721 19.2083 36.4317 19.3508 36.3612 19.4826C36.2958 19.605 35.929 20.67 35.5461 21.8493L34.85 23.9934L34.9534 24.2039C35.0138 24.3267 35.0675 24.5893 35.0824 24.8348C35.1163 25.3941 34.9626 25.816 34.5934 26.1769C34.2912 26.4722 31.592 28.0305 31.383 28.0303C31.0623 28.0301 30.8618 27.5607 31.0751 27.3098C31.1294 27.2459 31.7581 26.8609 32.4721 26.4541C33.1862 26.0475 33.8299 25.6618 33.9028 25.5971C34.1257 25.399 34.2085 25.181 34.1819 24.8625C34.138 24.3358 33.7578 24.0126 33.2403 24.062C33.0259 24.0825 32.5992 24.3076 30.8112 25.3438C28.3676 26.7599 28.0758 26.9826 27.687 27.7277C27.3258 28.4199 27.309 28.5701 27.3081 31.1276L27.3073 33.4121H29.5651H31.823V32.7733C31.823 32.0052 31.9424 31.555 32.2597 31.1263C32.3766 30.9684 33.1833 30.2122 34.0526 29.4458C34.9219 28.6793 35.7007 27.9723 35.7832 27.8748C35.9808 27.6412 35.959 27.7138 37.0749 23.5734C38.0984 19.7761 38.11 19.7158 37.8758 19.4017C37.5789 19.0034 37.1226 18.8987 36.7058 19.1332ZM18.7275 35.6545V37H21.4369H24.1463V35.6545V34.3091H21.4369H18.7275V35.6545ZM26.8557 35.6545V37H29.5651H32.2746V35.6545V34.3091H29.5651H26.8557V35.6545Z" fill="white" fill-opacity="0.9"/>
+              </svg><span class="px-2">Mental Assessment</span>
+            </div>
+            
+            <!-- icon 2 -->
+            <div class="col page2-aboutus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="page2-icon">
+                <rect width="50" height="50" rx="5" fill="#28B571"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7497 12.0149C24.6638 12.0268 24.4247 12.0594 24.2184 12.0874C23.3706 12.2022 22.3485 12.5309 21.5933 12.9315C21.0508 13.2192 20.1846 13.8902 19.8122 14.3112C19.3771 14.8031 18.9648 15.499 18.7659 16.0768C18.618 16.5068 18.6016 16.6399 18.6016 17.4095C18.6016 18.1768 18.6182 18.3128 18.7642 18.7368C19.4362 20.6885 21.2914 22.1564 23.7422 22.6754C24.2884 22.7911 24.4492 22.8028 25.4998 22.8028C26.5528 22.8028 26.7104 22.7913 27.2629 22.6744C29.7094 22.1565 31.5634 20.6884 32.2354 18.7368C32.3814 18.3128 32.398 18.1768 32.398 17.4095C32.398 16.6399 32.3816 16.5068 32.2337 16.0768C31.899 15.1043 31.254 14.2463 30.3285 13.5426C29.3236 12.7786 28.2622 12.3309 26.9149 12.1028C26.48 12.0291 25.0625 11.9716 24.7497 12.0149ZM23.5027 23.7131C22.9207 23.7601 22.1601 23.8709 21.6142 23.9882L21.2602 24.0642L20.8852 24.804C20.0745 26.403 19.5159 28.0158 19.0948 29.9738C19.0691 30.0933 19.1011 30.117 19.471 30.2523C20.0386 30.4599 20.5124 30.8261 20.7982 31.2781C21.024 31.6352 21.0306 31.661 21.0306 32.1856C21.0306 32.6917 21.0181 32.7462 20.8305 33.0557C20.5525 33.5143 20.0894 33.8823 19.5071 34.1072C19.0498 34.2839 19.0178 34.2889 18.3428 34.2889C17.6679 34.2889 17.6358 34.2839 17.1785 34.1072C16.5962 33.8823 16.1331 33.5143 15.8551 33.0557C15.6677 32.7465 15.655 32.6914 15.655 32.1881C15.655 31.6848 15.6677 31.6297 15.8551 31.3205C16.1248 30.8755 16.5948 30.4963 17.1418 30.2825C17.3818 30.1886 17.61 30.1118 17.6489 30.1118C17.6914 30.1118 17.7886 29.7907 17.8937 29.3029C18.124 28.234 18.652 26.6022 19.1146 25.5299C19.32 25.0539 19.4794 24.6575 19.4687 24.649C19.4336 24.621 18.7283 24.9453 18.0928 25.2817C16.855 25.9369 15.8646 26.7205 14.9915 27.7356C13.844 29.0697 13.2128 30.5122 13.0622 32.1444C12.9777 33.0607 12.9799 36.3842 13.0652 36.6243C13.1095 36.7491 13.1966 36.8412 13.3305 36.905C13.5261 36.9982 13.7543 37 25.4998 37C37.2453 37 37.4736 36.9982 37.6691 36.905C37.803 36.8412 37.8901 36.7491 37.9344 36.6243C38.0207 36.3812 38.0223 32.9944 37.9364 32.1148C37.6211 28.883 35.2768 26.1335 31.567 24.644C31.2154 24.5029 30.9161 24.3964 30.9019 24.4075C30.8878 24.4186 30.9343 24.6348 31.0054 24.888C31.2173 25.6433 31.3748 26.5867 31.3759 27.1072L31.3769 27.5957L32.0481 28.1337C34.0373 29.7281 34.8849 31.2694 34.4669 32.5321C34.2684 33.1314 33.6476 33.7015 32.8478 34.0188C32.1012 34.315 31.6567 34.2517 31.4934 33.8258C31.383 33.5377 31.5456 33.3574 32.1158 33.1356C32.3649 33.0387 32.6544 32.8958 32.7591 32.8181C33.7421 32.0882 33.1959 30.6524 31.3207 29.0371C31.071 28.8219 30.7704 28.5885 30.6528 28.5184L30.4391 28.391L29.8053 28.6715C28.6452 29.1848 27.5606 29.8981 27.042 30.4885C26.5738 31.0217 26.4393 31.6274 26.6917 32.066C26.7683 32.1991 26.9959 32.4159 27.2685 32.6155C27.7003 32.9317 27.7188 32.9544 27.7188 33.1692C27.7188 33.3603 27.6889 33.4139 27.5146 33.5356C27.2124 33.7467 26.9123 33.733 26.5188 33.4898C25.5302 32.8791 25.0673 32.0583 25.2429 31.2273C25.3919 30.5224 25.7765 29.965 26.5624 29.3148C27.3882 28.6318 28.4813 28.0107 29.6409 27.5657L30.0628 27.4038V27.1228C30.0628 26.5952 29.6551 24.7187 29.4207 24.1675C29.3321 23.9592 29.3194 23.9552 28.2501 23.8024C27.6539 23.7172 27.2327 23.6972 25.7811 23.6851C24.8185 23.6771 23.7932 23.6897 23.5027 23.7131Z" fill="white" fill-opacity="0.9"/>
+              </svg><span class="px-2">Expert Advice</span>
+            </div>
+
+            <!-- icon 3 -->
+            <div class="col page2-aboutus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="page2-icon">
+                <rect width="50" height="50" rx="5" fill="#F14B40"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5797 13.91V15.82H27.3623H28.1448V13.91V12H27.3623H26.5797V13.91ZM30.4191 14.7127L29.197 16.0969L29.7594 16.7336L30.3219 17.3702L31.544 15.9861L32.7661 14.6019L32.2036 13.9652L31.6412 13.3286L30.4191 14.7127ZM22.4956 13.9933L21.959 14.6026L23.1808 15.9864L24.4026 17.3702L24.9651 16.7336L25.5275 16.0969L24.3299 14.7405C23.6713 13.9945 23.1098 13.3841 23.0823 13.3841C23.0547 13.3841 22.7907 13.6582 22.4956 13.9933ZM26.1151 16.6888C25.9676 16.7314 25.6995 16.9772 25.6404 17.1239C25.6117 17.1953 25.4973 17.7844 25.3863 18.433L25.1845 19.6123L19.4628 19.64C13.9956 19.6664 13.7329 19.6722 13.5567 19.7713C13.3755 19.8733 13.2298 20.0581 13.1583 20.2766C13.1138 20.413 12.9666 33.3277 13.0069 33.5757C13.0228 33.6738 13.0925 33.8304 13.1619 33.9237C13.3994 34.2432 13.4569 34.2555 14.7103 34.2555H15.8555L15.9888 34.6693C16.1394 35.1365 16.4871 35.7305 16.7934 36.0437C18.4923 37.7806 21.1366 37.046 21.9121 34.6216L22.0203 34.2832L24.8558 34.2689L27.6912 34.2547L27.8014 34.6011C28.2987 36.1654 29.72 37.1784 31.1307 36.9738C31.699 36.8914 32.0981 36.7286 32.5258 36.4048C33.0982 35.9715 33.5078 35.3726 33.75 34.6154L33.8563 34.2832L35.6923 34.2555C37.4502 34.229 37.5341 34.223 37.6633 34.1137C37.7376 34.0509 37.8437 33.9308 37.8991 33.8467C37.998 33.6968 38 33.6364 38 30.7954C38 27.9415 37.9984 27.8946 37.8977 27.7407C37.8414 27.6547 37.2824 27.0612 36.6553 26.4218L35.5153 25.2592L33.7987 22.5741C32.338 20.2896 32.0528 19.8726 31.8864 19.7784C31.7147 19.6813 31.5722 19.6653 30.7255 19.6488L29.7602 19.63L29.5675 18.9291C29.4614 18.5436 29.3151 18.009 29.2423 17.741C29.0983 17.2112 28.9783 16.973 28.7649 16.7939C28.6344 16.6843 28.5616 16.6776 27.4199 16.6693C26.7561 16.6645 26.1689 16.6733 26.1151 16.6888ZM31.1606 21.5915C31.309 21.7795 33.2834 24.844 33.3136 24.9333C33.3361 24.9996 32.9608 25.009 30.7791 24.9967L28.2182 24.9824L28.2052 23.2944C28.1981 22.366 28.2029 21.5751 28.2159 21.5367C28.2342 21.4828 28.5608 21.4669 29.6509 21.4669C31.0529 21.4669 31.063 21.4677 31.1606 21.5915ZM21.5712 23.3439C21.908 23.517 22.0029 23.7588 22.024 24.498L22.0417 25.1208H22.552C23.1454 25.1208 23.3719 25.2146 23.5452 25.5321C23.6717 25.7637 23.689 26.1929 23.5814 26.4283C23.4079 26.8083 23.1242 26.9419 22.4836 26.9453L22.0312 26.9477L22.029 27.4598C22.0268 27.9935 21.9577 28.3145 21.8036 28.5072C21.4519 28.9471 20.7727 28.854 20.5292 28.3326C20.4336 28.1281 20.4172 28.0101 20.4172 27.5273V26.9617L19.8635 26.9377C19.2019 26.9091 19.0205 26.8157 18.8496 26.4159C18.6665 25.9879 18.7654 25.5587 19.1153 25.2626C19.2302 25.1653 19.3363 25.1458 19.8336 25.13L20.4172 25.1116V24.5384C20.4172 24.2233 20.4406 23.8953 20.4694 23.8096C20.6341 23.3172 21.1199 23.1119 21.5712 23.3439ZM19.6246 31.8692C19.943 32.0531 20.1556 32.2966 20.3171 32.6623C20.4439 32.9496 20.4661 33.0625 20.466 33.4201C20.466 33.767 20.4417 33.8983 20.3269 34.1725C20.188 34.5045 19.9088 34.8429 19.6498 34.9935C19.5742 35.0374 19.3869 35.1026 19.2337 35.1383C18.1761 35.385 17.2184 34.301 17.4364 33.1039C17.5072 32.7149 17.5844 32.5406 17.8124 32.2549C18.252 31.7042 19.0462 31.5352 19.6246 31.8692ZM31.4432 31.8733C32.0608 32.2117 32.4295 33.1142 32.252 33.8527C31.967 35.0377 30.7602 35.5492 29.8752 34.8599C28.7529 33.9859 29.1609 31.9459 30.5031 31.7205C30.8224 31.6668 31.1693 31.7232 31.4432 31.8733Z" fill="white" fill-opacity="0.9"/>
+              </svg><span class="px-2">Emergency Service</span>
+            </div>
+            
+            <!-- icon 4 -->
+            <div class="col page2-aboutus">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none" class="page2-icon">
+                <rect width="50" height="50" rx="5" fill="#FE8F26"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3628 12.0139C20.2398 12.3407 17.5491 13.7287 15.6524 15.9911C14.2698 17.6402 13.3754 19.6574 13.0632 21.8309C12.9684 22.491 12.9829 24.1948 13.0891 24.8853C13.8629 29.9123 17.6699 33.7172 22.6784 34.4693C23.4929 34.5917 24.9183 34.6009 25.7527 34.4893C26.2949 34.4168 27.2723 34.2124 27.324 34.1607C27.3366 34.1481 27.305 33.9736 27.2537 33.7729C27.1327 33.3003 27.0328 32.3255 27.0738 32.0171C27.0914 31.8844 27.0884 31.7759 27.0673 31.7759C27.0461 31.7759 26.8748 31.8205 26.6867 31.8751C25.7643 32.1428 24.4693 32.2627 23.5094 32.1692C20.6011 31.8861 18.0891 30.2998 16.5935 27.8019C16.0882 26.958 15.6758 25.8443 15.4863 24.812C15.4179 24.4394 15.3963 24.0794 15.3956 23.297C15.3946 22.2159 15.4295 21.9081 15.65 21.049C16.5644 17.4865 19.6006 14.8601 23.3103 14.4227C23.9226 14.3505 25.2179 14.3907 25.8314 14.5009C28.9678 15.0642 31.6065 17.2963 32.677 20.2916C33.2892 22.0047 33.3616 24.0061 32.8722 25.6915C32.8176 25.8795 32.7729 26.0507 32.7729 26.0719C32.7729 26.093 32.8816 26.096 33.0143 26.0784C33.323 26.0374 34.298 26.1374 34.7717 26.2585C35.0381 26.3266 35.147 26.3369 35.172 26.2964C35.2287 26.2047 35.4138 25.2894 35.492 24.7142C35.5989 23.9277 35.5871 22.4819 35.4672 21.6843C35.2809 20.4444 34.9682 19.4436 34.4122 18.3082C33.8492 17.1584 33.2312 16.2877 32.3197 15.3601C30.5821 13.5916 28.3712 12.466 25.9235 12.1035C25.4321 12.0307 23.7606 11.9722 23.3628 12.0139ZM22.745 15.9916C21.6847 16.2203 20.5536 16.7426 19.7534 17.3731L19.5659 17.5209L20.2789 18.2348C20.671 18.6276 20.9919 18.971 20.9919 18.998C20.9919 19.061 20.0527 19.9983 19.9895 19.9983C19.9634 19.9983 19.6207 19.6776 19.2279 19.2855L18.5137 18.5727L18.3659 18.7602C17.9218 19.3234 17.4482 20.2131 17.2045 20.9418C17.057 21.3827 16.8875 22.1496 16.8864 22.3807L16.8857 22.5396H17.9122H18.9388V23.2726V24.0056H17.9122H16.8857V24.1469C16.8857 24.3885 17.034 25.0845 17.1879 25.5651C17.4377 26.3448 17.7558 26.9651 18.2893 27.7125L18.5114 28.0236L19.2513 27.2851L19.9913 26.5465L20.5031 27.06L21.0149 27.5733L20.2824 28.3081L19.5498 29.0428L19.672 29.14C20.2623 29.6094 21.0967 30.0622 21.863 30.3288C22.2914 30.4779 23.2496 30.7007 23.4621 30.7007C23.52 30.7007 23.5342 30.5238 23.5451 29.6623L23.5583 28.6238L24.2794 28.6102L25.0004 28.5968V29.6533V30.7099L25.257 30.6773C25.7204 30.6184 26.5319 30.4063 26.999 30.222L27.4577 30.041L27.7338 29.5001C27.8856 29.2026 28.0948 28.8434 28.1988 28.7019L28.3877 28.4446L27.9535 28.0085L27.5192 27.5724L28.0437 27.048L28.5682 26.5237L29.0029 26.9563L29.4376 27.3889L29.7482 27.1755C29.9191 27.0582 30.2773 26.8511 30.5441 26.7153L31.0294 26.4684L31.2151 26.0067C31.402 25.5421 31.6135 24.7383 31.674 24.2622L31.7067 24.0056H30.6498H29.5929L29.6064 23.2848L29.6199 22.564L30.6587 22.5508C31.5205 22.5398 31.6975 22.5257 31.6975 22.4678C31.6975 22.2553 31.4746 21.2975 31.3254 20.8691C31.0587 20.1031 30.6058 19.2689 30.1363 18.6789L30.0391 18.5567L29.3041 19.289L28.5692 20.0213L28.0556 19.5097L27.5421 18.998L28.2795 18.2596L29.0169 17.5212L28.6829 17.2772C27.998 16.7766 27.3598 16.4514 26.5603 16.1955C26.0796 16.0416 25.3834 15.8933 25.1417 15.8933H25.0004V16.9196V17.9458H24.2671H23.5339V16.9196V15.8933L23.3506 15.8969C23.2498 15.8989 22.9772 15.9416 22.745 15.9916ZM25.0004 21.2201V22.5396H25.8314H26.6624V23.2726V24.0056H25.0982H23.5339V21.9531V19.9006H24.2671H25.0004V21.2201ZM32.6883 27.5762C30.1336 27.9084 28.2751 30.2472 28.5676 32.7621C28.7013 33.9118 29.1743 34.8751 29.9935 35.6663C32.2282 37.8246 35.8477 37.2931 37.3946 34.5794C38.4134 32.7921 38.1255 30.529 36.6879 29.0241C36.227 28.5417 35.8471 28.2679 35.2588 27.9942C34.404 27.5966 33.5721 27.4613 32.6883 27.5762ZM35.0577 31.1033L35.5599 31.6036L34.1057 33.058L32.6516 34.5123L31.808 33.6701L30.9645 32.8279L31.4889 32.3021L32.0132 31.7762L32.3448 32.1052L32.6763 32.4341L33.5921 31.5186C34.0959 31.015 34.5187 30.603 34.5318 30.603C34.5448 30.603 34.7815 30.8281 35.0577 31.1033Z" fill="white" fill-opacity="0.9"/>
+              </svg><span class="px-2">24/7 Support</span>
+            </div>
+            
+            
+          </div>
+          <div class="row">
+            <div class="col-4 gy-5 offset-4 offset-lg-0">
+              <a href="#Services"><button class="btn page2-btn" data-bs-toggle="button">Learn More</button></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- page 3 -->
+<div style="background: rgba(88, 134, 197, 0.10);" id="Services">
+  <div class="container text-center mt-5">
+    <div class="row justify-content-center py-5">
+        <div class="page3-head">Facilities We Provide</div>
+        <div class="page3-subhead">Hospital department means a subdivision of a hospital providing administrative oversight for one or more charge sources.</div>
+    </div>
+    
+    <!-- Services cards -->
+    <div class="row row-cols-lg-3 row-cols-1 g-5 py-4 justify-content-center">
+
+      <!-- first card -->
+      <div class="col mx-lg-0 mx-auto">
+        <div class="page3-card py-5 px-1">
+          <div class="card text-center">
+            <div class="page3-img mx-auto">
+              <img src= "{% static 'members/images/8.png' %}" alt="">
+            </div>
+            <div class="card-body mt-5 mx-auto page3">
+              <h3 class="card-title pb-3">Mental Assessment</h3>
+              <p class="card-subtitle ">A medical procedure involving an performed to repair damage or arrest disease in a living body.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div class="col">
+        <div class="page3-card py-5 px-1">
+          <div class="card text-center ">
+            <div class="page3-img mx-auto">
+              <img src="{% static 'members/images/6.png' %}" class="mx-auto">
+            </div>
+            <div class="card-body mt-5 mx-auto page3">
+              <h3 class="card-title pb-3">Mental Health</h3>
+              <p class="card-subtitle ">A medical procedure involving an performed to repair damage or arrest disease in a living body.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Third Card -->
+      <div class="col ">
+        <div class="page3-card py-5 px-1">
+          <div class="card text-center ">
+            <div class="page3-img mx-auto">
+              <img src="{% static 'members/images/7.png' %}" alt="">
+            </div>
+            <div class="card-body mt-5 mx-auto page3">
+              <h3 class="card-title pb-3">Virutal Support</h3>
+              <p class="card-subtitle ">A medical procedure involving an performed to repair damage or arrest disease in a living body.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Page 4 -->
+<div class="container p-4 my-3">
+      <div class="row">
+          <div class="col-12">
+              <div class="row justify-content-between">
+                  <div class="col-md-6 page4-text">
+                      <div class="ml-5">
+                          <h1 class="card-title my-5 page4-header">Wellness Promotion</h1>
+                          <p class="mb-5 page4-subhead">Depression, marked by persistent sadness and hopelessness, can impair daily functioning and relationships, but with effective treatment, including therapy and medication, symptoms can be significantly improved.</p>
+
+                          <!-- Watch Video Button -->
+                          <!-- <a href="#" class="btn btn-success"><i class="fa-solid fa-play"></i> Watch Video </a> -->
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 p-5">
+                      <!-- <img src="{% static 'members/images/vrdoc.png' %}" class="img-fluid rounded-5" alt="Future Technology Image"> -->
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/lQhpetkwWnM?si=f96Y-hSpT_7mrCvd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div> <!-- container-fluid -->
+
+<!-- Page 5 -->
+<div style="background: rgba(88, 134, 197, 0.10);" id="Doctor">
+  <div class="page5 mx-auto p-5">
+    <div class="box">
+      <div class="section">
+        <div class="doctor">
+          <div class="overlap-group">
+            <div class="rectangle"></div>
+            <div class="div"></div>
+            <img class="pngegg" src="https://c.animaapp.com/F1argy3J/img/pngegg--21--5@2x.png" />
+            <img class="mask-group" src="https://c.animaapp.com/F1argy3J/img/mask-group@2x.png" />
+            <div class="group">
+              <div class="text-wrapper">Dr. Jonson Bell</div>
+              <div class="text-wrapper-2">Psychiatrist</div>
+              <div class="vector-wrapper">
+                <img class="vector" src="https://c.animaapp.com/F1argy3J/img/vector-3.svg" />
+              </div>
+              <div class="group-2">
+                <div class="text-wrapper-3">4.5</div>
+                <img class="img" src="https://c.animaapp.com/F1argy3J/img/group-3@2x.png" />
+              </div>
+              <div class="group-3">
+                <div class="text-wrapper-4">7 Years</div>
+                <img class="portfolio-traced" src="https://c.animaapp.com/F1argy3J/img/portfolio--1--1--traced--3.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlap-wrapper">
+          <div class="overlap">
+            <div class="rectangle-2"></div>
+            <div class="rectangle-3"></div>
+            <img class="pngegg-2" src="https://c.animaapp.com/F1argy3J/img/pngegg--21--5@2x.png" />
+            <img class="mask-group-2" src="https://c.animaapp.com/F1argy3J/img/mask-group-1@2x.png" />
+            <div class="group-4">
+              <div class="text-wrapper-5">Dr. Shaun Murphy</div>
+              <div class="text-wrapper-6">Psychiatrist</div>
+              <div class="vector-wrapper">
+                <img class="vector" src="https://c.animaapp.com/F1argy3J/img/vector-3.svg" />
+              </div>
+              <div class="group-2">
+                <div class="text-wrapper-3">4.7</div>
+                <img class="img" src="https://c.animaapp.com/F1argy3J/img/group-3@2x.png" />
+              </div>
+              <div class="group-3">
+                <div class="text-wrapper-4">3 Years</div>
+                <img class="portfolio-traced" src="https://c.animaapp.com/F1argy3J/img/portfolio--1--1--traced--3.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlap-group-wrapper">
+          <div class="overlap-2">
+            <div class="rectangle-4"></div>
+            <div class="rectangle-5"></div>
+            <img class="pngegg-3" src="https://c.animaapp.com/F1argy3J/img/pngegg--21--5@2x.png" />
+            <img class="pleased-young-female"src="https://c.animaapp.com/F1argy3J/img/pleased-young-female-doctor-wearing-medical-robe-stethoscope-aro.png"/>
+            <div class="group-5">
+              <div class="text-wrapper-7">Dr. Patrice Harris</div>
+              <div class="text-wrapper-8">Psychiatrist</div>
+              <div class="vector-wrapper">
+                <img class="vector" src="https://c.animaapp.com/F1argy3J/img/vector-3.svg" />
+              </div>
+              <div class="group-2">
+                <div class="text-wrapper-3">4.8</div>
+                <img class="img" src="https://c.animaapp.com/F1argy3J/img/group-3@2x.png" />
+              </div>
+              <div class="group-3">
+                <div class="text-wrapper-4">5 Years</div>
+                <img class="portfolio-traced" src="https://c.animaapp.com/F1argy3J/img/portfolio--1--1--traced--3.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-wrapper">
+          <div class="overlap-3">
+            <div class="rectangle-6"></div>
+            <div class="rectangle-7"></div>
+            <img class="pngegg-4" src="https://c.animaapp.com/F1argy3J/img/pngegg--21--3.png" />
+            <img class="image-removebg" src="https://c.animaapp.com/F1argy3J/img/image-removebg-preview--3--1.png" />
+            <div class="group-6">
+              <div class="text-wrapper">Dr. Johan Smith</div>
+              <div class="text-wrapper-9">Psychiatrist</div>
+              <div class="vector-wrapper">
+                <img class="vector" src="https://c.animaapp.com/F1argy3J/img/vector-3.svg" />
+              </div>
+              <div class="group-2">
+                <div class="text-wrapper-3">4.5</div>
+                <img class="img" src="https://c.animaapp.com/F1argy3J/img/group-3@2x.png" />
+              </div>
+              <div class="group-3">
+                <div class="text-wrapper-4">4 Years</div>
+                <img class="portfolio-traced" src="https://c.animaapp.com/F1argy3J/img/portfolio--1--1--traced--3.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <div class="text-wrapper-10">Meet Our Doctor Specialists</div>
+          <p class="clinical-research">
+            Clinical Research Training and Medical Education · Critical Care Medicine&nbsp;&nbsp;Additional NIH
+            Doctors/Researchers
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page 6 -->
+<div id="FAQ" class="container my-5">
+  <!-- Header Text -->
+  <div class="row justify-content-center g-2">
+    <div class="page6-title">Frequently Asked Questions</div>
+    <div class="page6-subhead">A frequently asked questions (FAQ) forum is often used in article, websites, 
+      email lista and online forums where common questions tend to recure</div>
+  </div>
+
+  <div class="row justify-content-between mt-4">
+    <div class="col-5 align-self-center">
+      <div class="page6-image">
+        <img src="{% static 'members/images/old-doctor.png' %}" alt="" srcset="">
+      </div>
+    </div>
+
+    <div class="col-6">
+      <!-- FAQ 1 -->
+      <div class="row row-cols-2 justify-content-between">
+        <div class="col page6-Que">What does telemedicine mean?</div>
+
+        <div class="col page6-icon">
+          <i class="fa fa-2x fa-plus gradient toggle-button"></i>
+        </div>
+
+        <div class="col page6-Ans ">Telemedicine is the exchange of medical information from one location to another using electronic communication, </div>
+      </div>
+      <hr class="mt-2">
+
+      <!-- FAQ 2 -->
+      <div class="row row-cols-2 justify-content-between">
+        <div class="col page6-Que">What is telemedicine used for?</div>
+
+        <div class="col page6-icon">
+          <!-- <a href="#" ><i class="fa fa-2x fa-plus gradient toggle-button"></i></a> -->
+          <i class="fa fa-2x fa-plus gradient toggle-button"></i>
+        </div>
+
+        <div class="col page6-Ans ">Telemedicine is the exchange of medical information from one location to another using electronic communication, </div>
+      </div>
+      <hr class="mt-2">
+      
+      <!-- FAQ 3 -->
+      <div class="row row-cols-2 justify-content-between">
+        <div class="col page6-Que">Is this test effective?</div>
+
+        <div class="col page6-icon">
+          <i class="fa fa-2x fa-plus gradient toggle-button"></i>
+        </div>
+
+        <div class="col page6-Ans ">Telemedicine is the exchange of medical information from one location to another using electronic communication, </div>
+      </div>
+      <hr class="mt-2">
+
+      <!-- FAQ 4 -->
+      <div class="row row-cols-2 justify-content-between">
+        <div class="col page6-Que">What are the common signs of mental health issues?</div>
+
+        <div class="col page6-icon">
+          <i class="fa fa-2x fa-plus gradient toggle-button"></i>
+        </div>
+
+        <div class="col page6-Ans ">Telemedicine is the exchange of medical information from one location to another using electronic communication, </div>
+      </div>
+      <hr class="mt-2">
+
+      <!-- Faq 5 -->
+      <div class="row row-cols-2 justify-content-between toggle-button">
+        <div class="col page6-Que">When should I seek professional help for mental health concerns?</div>
+
+        <div class="col page6-icon">
+          <i class="fa fa-2x fa-plus gradient toggle-button"></i>
+        </div>
+
+        <div class="col page6-Ans ">Telemedicine is the exchange of medical information from one location to another using electronic communication, </div>
+      </div>
+      <hr class="mt-2">
+
+      <!-- Faq 6 -->
+      <!-- <div class="row row-cols-2 justify-content-between">
+        <div class="col page6-Que">What are the common signs of mental health issues?</div>
+
+        <div class="col page6-icon">
+          <a href="#"><i class="fa fa-2x fa-plus gradient"></i></a>
+        </div>
+      </div>
+      <hr class="mt-2"> -->
+    </div>
+  </div>
+</div> <!-- page 6 end -->
+
+<!-- page 7 -->
+<div class="p-4 mt-3 card-color">
+  <div class="container">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="card ">
+              <div class="card-body card-color">
+                  <div class="row ps-5">
+                      <div class="col-md-6 align-self-center">
+                          <!-- Changed "col-md-12" to "col-md-6" to fix the nesting issue -->
+                          <h1 class="card-title">What Patients Say About Us</h1>
+                          <!-- Corrected the closing tag for h1 -->
+
+                          <p class="my-5">
+                              <!-- Added margin-top class "mt-4" for spacing -->
+                              "Excellent service, one of the best hospital experiences! A good experience.
+                              Everything went well. No complaints, no delays, no pain—a very well-seen procedure.
+                              Great experience all around. Great thanks to all who cared for me that day."
+                          </p>
+                          <h4>Moin Ali</h4>
+                          <p>Designer</p>
+                      </div>
+                      <div class="col-md-6 image-column">
+                          <!-- Placeholder image -->
+                          <img src="{% static 'members/images/review.png' %}" alt="Placeholder Image" class="img-fluid ms-5">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div> <!-- container-fluid --> 
+<!-- page7 end -->
+
+<!-- Footer -->
+<footer class="pt-5" style="color: white; background: linear-gradient(90deg, #0C9CD3 0.12%, #69C18B 99.89%);" >
+  <div class="container ">
+    <div class="row" >
+        <div class="col-md-12" >
+            <div class="row">
+                <div class="col-md-7">
+                    <header class="row footer-logo">
+                        <img src="{% static 'members/images/logo-bw.png' %}" class="ml-3">
+                    </header>
+                    <div class="row mt-5 ml-2">
+                        <span >We will help you in maintaining 
+                            <br>your health here we choose</p>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="col-md-3">
+                            <span >About Us</p>
+                                <span >Contact Us</p>
+                                    <span > Clinical Board</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span >Company</p>
+                                <span >Partnerships</p>
+                                    <span >Newsroom</p>
+                                      
+                        </div>
+                        <div class="col-md-3">
+                            <span >Terms & Policies</p>
+                                <span >Privacy policy</p>
+                                    <span >Support</p>         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 p-5">
+                    <h1 >
+                        Subscribe to 
+                        Our newsletter.
+                    </h1>
+                    <p >
+                        To make your stay special-and even more memorable.
+                    </p>
+                    <form class="row g-3">
+                      <div class="col-12">
+                          
+                          <input type="email" class="form-control form-control-sm" id="inputPassword2" placeholder="Enter Your Email Address">
+                        
+                          <button type="submit" class="btn btn-primary mb-3">Subscribe!</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p >Copyright 2023, @Tele-Psychiatry</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</footer>
+
+ <!-- Page content wrapper -->
+
+
+<!-- js -->
+<script src="{% static 'members/js/scripts.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
